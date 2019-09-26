@@ -253,8 +253,8 @@ namespace ExtractCalendar
                 new KeyValuePair<string, string>("form:offsetFuseauNavigateur", "-7200000"),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState),
                 new KeyValuePair<string, string>("form:calendarDebut_input", ""),
-                new KeyValuePair<string, string>("form:j_idt114_end", "1570831200000"),
-                new KeyValuePair<string, string>("form:j_idt114_start", "1567375200000"),
+                new KeyValuePair<string, string>("form:j_idt114_end", "3155760000000"),
+                new KeyValuePair<string, string>("form:j_idt114_start", "0"),
                 new KeyValuePair<string, string>("form:onglets_activeIndex", "0"),
                 new KeyValuePair<string, string>("form:onglets_scrollState", "0"),
                 new KeyValuePair<string, string>("form:largeurDivCenter", "1620")
