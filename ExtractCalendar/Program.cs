@@ -106,7 +106,8 @@ namespace ExtractCalendar
                         .Groups[1]
                         .Value),
                 new KeyValuePair<string, string>("_eventId", "submit"),
-                new KeyValuePair<string, string>("geolocation", "")
+                new KeyValuePair<string, string>("geolocation", ""),
+                new KeyValuePair<string, string>("submit", "LOGIN")
             });
             var loginResult = Client
                 .PostAsync("https://cas.ensiie.fr/login?service=https%3A%2F%2Faurionweb.ensiie.fr%2F%2Flogin%2Fcas",
@@ -226,10 +227,10 @@ namespace ExtractCalendar
                 new KeyValuePair<string, string>("form:calendarFin_input", ""),
                 new KeyValuePair<string, string>("form:j_idt187_reflowDD", "0_0"),
                 new KeyValuePair<string, string>("form:j_idt187:j_idt192:filter", ""),
-                new KeyValuePair<string, string>("form:j_idt187:j_idt266:filter", ""),
+                new KeyValuePair<string, string>("form:j_idt187:j_idt194:filter", ""),
                 new KeyValuePair<string, string>("form:j_idt187_checkbox", "on"),
                 new KeyValuePair<string, string>("form:j_idt187_selection", calendarId),
-                new KeyValuePair<string, string>("form:j_idt244", ""),
+                new KeyValuePair<string, string>("form:j_idt246", ""),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState)
             });
             response = Client.PostAsync("/faces/ChoixPlanning.xhtml", content).Result;
@@ -252,7 +253,6 @@ namespace ExtractCalendar
                 new KeyValuePair<string, string>("form:j_idt116_view", "month"),
                 new KeyValuePair<string, string>("form:offsetFuseauNavigateur", "-7200000"),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState),
-                new KeyValuePair<string, string>("form:calendarDebut_input", ""),
                 new KeyValuePair<string, string>("form:j_idt116_end", "3155760000000"),
                 new KeyValuePair<string, string>("form:j_idt116_start", "0"),
                 new KeyValuePair<string, string>("form:onglets_activeIndex", "0"),
