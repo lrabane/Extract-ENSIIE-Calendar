@@ -230,7 +230,7 @@ namespace ExtractCalendar
                 new KeyValuePair<string, string>("form:j_idt187:j_idt194:filter", ""),
                 new KeyValuePair<string, string>("form:j_idt187_checkbox", "on"),
                 new KeyValuePair<string, string>("form:j_idt187_selection", calendarId),
-                new KeyValuePair<string, string>("form:j_idt246", ""),
+                new KeyValuePair<string, string>("form:j_idt249", ""),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState)
             });
             response = Client.PostAsync("/faces/ChoixPlanning.xhtml", content).Result;
