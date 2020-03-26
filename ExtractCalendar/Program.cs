@@ -159,7 +159,7 @@ namespace ExtractCalendar
         {
             var xDoc = XDocument.Parse(responseBody);
             var jsonBody = xDoc.Descendants("changes").FirstOrDefault()?.Elements("update")
-                .First(x => x.FirstAttribute.Value == "form:j_idt116")
+                .First(x => x.FirstAttribute.Value == "form:j_idt109")
                 .Value;
             jsonBody = Regex.Match(jsonBody ?? throw new InvalidOperationException(), @"^\{""events"" : (.+?)\}$")
                 .Groups[1].Value;
@@ -225,12 +225,12 @@ namespace ExtractCalendar
                 new KeyValuePair<string, string>("form:input-nombre-fin", ""),
                 new KeyValuePair<string, string>("form:calendarDebut_input", ""),
                 new KeyValuePair<string, string>("form:calendarFin_input", ""),
-                new KeyValuePair<string, string>("form:j_idt187_reflowDD", "0_0"),
-                new KeyValuePair<string, string>("form:j_idt187:j_idt192:filter", ""),
-                new KeyValuePair<string, string>("form:j_idt187:j_idt194:filter", ""),
-                new KeyValuePair<string, string>("form:j_idt187_checkbox", "on"),
-                new KeyValuePair<string, string>("form:j_idt187_selection", calendarId),
-                new KeyValuePair<string, string>("form:j_idt249", ""),
+                new KeyValuePair<string, string>("form:j_idt180_reflowDD", "0_0"),
+                new KeyValuePair<string, string>("form:j_idt180:j_idt185:filter", ""),
+                new KeyValuePair<string, string>("form:j_idt180:j_idt187:filter", ""),
+                new KeyValuePair<string, string>("form:j_idt180_checkbox", "on"),
+                new KeyValuePair<string, string>("form:j_idt180_selection", calendarId),
+                new KeyValuePair<string, string>("form:j_idt235", ""),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState)
             });
             response = Client.PostAsync("/faces/ChoixPlanning.xhtml", content).Result;
@@ -245,16 +245,16 @@ namespace ExtractCalendar
             content = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("javax.faces.partial.ajax", "true"),
-                new KeyValuePair<string, string>("javax.faces.source", "form:j_idt116"),
-                new KeyValuePair<string, string>("javax.faces.partial.execute", "form:j_idt116"),
-                new KeyValuePair<string, string>("form:j_idt116", "form:j_idt116"),
-                new KeyValuePair<string, string>("javax.faces.partial.render", "form:j_idt116"),
+                new KeyValuePair<string, string>("javax.faces.source", "form:j_idt109"),
+                new KeyValuePair<string, string>("javax.faces.partial.execute", "form:j_idt109"),
+                new KeyValuePair<string, string>("form:j_idt109", "form:j_idt109"),
+                new KeyValuePair<string, string>("javax.faces.partial.render", "form:j_idt109"),
                 new KeyValuePair<string, string>("form", "form"),
-                new KeyValuePair<string, string>("form:j_idt116_view", "month"),
+                new KeyValuePair<string, string>("form:j_idt109_view", "month"),
                 new KeyValuePair<string, string>("form:offsetFuseauNavigateur", "-7200000"),
                 new KeyValuePair<string, string>("javax.faces.ViewState", ViewState),
-                new KeyValuePair<string, string>("form:j_idt116_end", "3155760000000"),
-                new KeyValuePair<string, string>("form:j_idt116_start", "0"),
+                new KeyValuePair<string, string>("form:j_idt109_end", "3155760000000"),
+                new KeyValuePair<string, string>("form:j_idt109_start", "0"),
                 new KeyValuePair<string, string>("form:onglets_activeIndex", "0"),
                 new KeyValuePair<string, string>("form:onglets_scrollState", "0"),
                 new KeyValuePair<string, string>("form:largeurDivCenter", "1620")
