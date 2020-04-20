@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExtractCalendar
 {
-    class CalendarEvent
+    class AurionCalendarEvent
     {
         public string Id { get; set; }
         public string Title { get; set; }
